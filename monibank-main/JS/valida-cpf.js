@@ -4,11 +4,8 @@ export default function ehUmCPF(campo) {
       validaNumerosRepetidos(cpf) ||
       validaPrimeiroDigito(cpf) ||
       validaSegundoDigito(cpf)
-   ) {
-      console.log("Esse CPF não existe");
-   } else {
-      console.log("Existe!");
-   }
+   )
+      campo.setCustomValidity("esse cpf não é valido");
 }
 
 function validaNumerosRepetidos(cpf) {
